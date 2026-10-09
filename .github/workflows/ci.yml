@@ -29,7 +29,7 @@ jobs:
             requirements.txt
 
       - name: Install project and development dependencies
-        run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[dev,ocr]"
 
       - name: Run Ruff
         run: ruff check src tests
